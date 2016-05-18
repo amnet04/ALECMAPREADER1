@@ -120,9 +120,6 @@ def detectar_area_contornos(imagen,
         x2 = x+wc
         y2 = y+hc
         if (wc > w) and (hc >  h):
-            print ('<<<<<<<<<<<<<<<<<<<<<<')
-            print (len((x1, y1 , x2, y2)))
-            print ('>>>>>>>>>>>>>>>>>>>>>')
             areas.append((x1, y1 , x2, y2))
 
     return (areas)

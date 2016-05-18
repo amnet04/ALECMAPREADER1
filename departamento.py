@@ -70,11 +70,10 @@ class departamento(object):
         img = np.array(self.mapa)
         self.detectar_localidades()
         for id, datos in self.localidades.items():
-            supi = (datos['supi'][0]-200,datos['supi'][1]+20)
-            infd = (supi[0]+426,supi[1]+100)
+            supi = (datos['centro_inf'][0]-201,datos['centro_inf'][1]-6)
+            infd = (datos['centro_inf'][0]+201,datos['centro_inf'][1]+105)
             roiv = self.mapa[supi[1]:infd[1],supi[0]:infd[0]]
             roiv = sc.signos_convencionales(roiv)
-            #cvr.ver_imagen(roiv, id)
             areas = cvr.detectar_area_contornos(roiv, 200, 255, (1,1), 1, 18,18)
             for area in areas:
                 x1, y1, x2, y2 = area
@@ -84,10 +83,14 @@ class departamento(object):
                 rigth = area_infd[0] > (supi[0]+infd[0])/2
                 center = left and rigth
                 top = area_supi[1] - 20 <  supi[1]
-                no_marco = (area_infd[0] - area_supi[0]) < 424
-                no_marco = no_marco and (area_infd[1] - area_supi[1]  < 80)
-                color = (255,0,255)
-                elegido = center and top and no_marco
+                no_marco = (area_infd[0] - area_supi[0]) < 398
+                no_marco = no_marco and (area_infd[1] - area_supi[1]  < 100)
+                color = (0,0,255)
+                elegido = center and no_marco and top
+                if id == '0000_':
+                    cv2.rectangle(img, area_supi, area_infd,(0,255,0),2)
+                    cvr.ver_imagen(roiv, id)
+                    #print ('centro:{0}, top: {1}, no_marco: {2}'.format(center, top, no_marco))
                 if elegido:
                     cv2.rectangle(img, area_supi, area_infd,color,2)
                     cv2.putText(img,
@@ -99,44 +102,6 @@ class departamento(object):
                                 2
                                 )
         cv2.imwrite('Pruebas/col2.jpg',img)
-    # def area_variantes(self):
-    #     img = np.array(self.mapa)
-    #     self.detectar_localidades()
-    #     for id, datos in self.localidades.items():
-    #         supi = (datos['centro_inf'][0] - 200, datos['centro_inf'][1])
-    #         infd = (datos['centro_inf'][0] + 200, datos['centro_inf'][1]+80)
-    #         roiv = self.mapa[supi[1]:infd[1],supi[0]:infd[0]]
-    #         roiv = sc.signos_convencionales(roiv)
-    #         areas = cvr.detectar_area_contornos(roiv, 200, 255, (1,1), 1, 18,18)
-    #         if id == 'Cu05_':
-    #             cv2.rectangle(img, supi, infd, (255,0,0), 3)
-    #             cv2.imwrite('Pruebas/col1.jpg',roiv)
-    #             for areas in areas:
-    #                 cv2.rectangle(img, supi, infd, (0,255,0), 3)
-    #
-    #         for area in areas:
-    #             x1, y1, x2, y2 = area
-    #             area_supi = tuple(map(add, (x1,y1),supi))
-    #             area_infd = tuple(map(add, (x2,y2),supi))
-    #             left = area_supi[0] < (supi[0]+infd[0])/2
-    #             rigth = area_infd[0] > (supi[0]+infd[0])/2
-    #             center = left and rigth
-    #             top = area_supi[1] - 20 <  supi[1]
-    #             no_marco =  (area_infd[0] - area_supi[0]) < 398
-    #             color = (0,0,255)
-    #             elegido = center and top and no_marco
-    #             if elegido:
-    #                 cv2.rectangle(img, area_supi, area_infd,color,2)
-    #                 cv2.putText(img,
-    #                             datos['localidadalec'],
-    #                             area_supi,
-    #                             cv2.FONT_HERSHEY_SIMPLEX,
-    #                             0.8,
-    #                             (0, 0, 0),
-    #                             2
-    #                             )
-    #     cv2.imwrite('Pruebas/col2.jpg',img)
 
-
-mapa = departamento(RUTA_DEPARTAMENTOS+'/Cu.jpg',cv2.imread('../jpgs/alec_v4_044.jpg'))
+mapa = departamento(RUTA_DEPARTAMENTOS+'/Bo.jpg',cv2.imread('../jpgs/alec_v4_044.jpg'))
 mapa.area_variantes()
