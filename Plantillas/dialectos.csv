@@ -1,0 +1,263 @@
+Idlocalidad,localidadalec,SUPERDIALECTO,DIALECTO,SUBDIALECTO
+Ch01_,Ch1,Costeño,Costeño atlántico,Atlántico interior
+Ch10_,Ch10,Costeño,Costeño pacífico,Pacifico norte
+Ch30_,Ch30,Costeño,Costeño pacífico,Pacifico norte
+Ch03_,Ch3,Costeño,Costeño pacífico,Pacifico norte
+Ch04_,Ch4,Costeño,Costeño pacífico,Pacifico norte
+Ch05_,Ch5,Costeño,Costeño pacífico,Pacifico norte
+Ch06_,Ch6,Costeño,Costeño pacífico,Pacifico norte
+Ch60_,Ch60,Costeño,Costeño pacífico,Pacifico norte
+V_02_,V2,Andino,Andino Occidental,Antioqueño-Caldense
+V_20_,V20,Andino,Andino Occidental,Antioqueño-Caldense
+V_21_,V21,Andino,Andino Occidental,Antioqueño-Caldense
+V_03_,V3,Costeño,Costeño pacífico,Pacífico sur
+V_04_,V4,Andino,Andino Occidental,Antioqueño-Caldense
+V_04a,V4a,Andino,Andino Occidental,Antioqueño-Caldense
+V_40_,V40,Andino,Andino Occidental,Caucano-Valluno
+V_41_,V41,Andino,Andino Occidental,Caucano-Valluno
+V_42_,V42,Andino,Andino Occidental,Caucano-Valluno
+V_05_,V5,Andino,Andino Occidental,Caucano-Valluno
+V_06_,V6,Andino,Andino Occidental,Caucano-Valluno
+V_60_,V60,Andino,Andino Occidental,Caucano-Valluno
+V_61_,V61,Andino,Andino Occidental,Caucano-Valluno
+V_62_,V62,Andino,Andino Occidental,Caucano-Valluno
+V_63_,V63,Andino,Andino Occidental,Caucano-Valluno
+Ca01_,Ca1,Costeño,Costeño pacífico,Pacífico sur
+Ca10_,Ca10,Costeño,Costeño pacífico,Pacífico sur
+Ca02_,Ca2,Andino,Andino Occidental,Caucano-Valluno
+Ca20_,Ca20,Andino,Andino Occidental,Caucano-Valluno
+Ca21_,Ca21,Andino,Andino Occidental,Caucano-Valluno
+Ca03_,Ca3,Andino,Andino Occidental,Caucano-Valluno
+Ca30_,Ca30,Andino,Andino Occidental,Caucano-Valluno
+Ca04_,Ca4,Andino,Andino Occidental,Caucano-Valluno
+Ca40_,Ca40,Andino,Andino Occidental,Caucano-Valluno
+N_01_,N1,Costeño,Costeño pacífico,Pacífico sur
+N_03_,N3,Costeño,Costeño pacífico,Pacífico sur
+N_30_,N30,Costeño,Costeño pacífico,Pacífico sur
+N_31_,N31,Andino,Andino Occidental,Andino Sureño
+N_04_,N4,Andino,Andino Occidental,Andino Sureño
+N_40_,N40,Andino,Andino Occidental,Andino Sureño
+N_06_,N6,Andino,Andino Occidental,Andino Sureño
+P_01_,P1,Andino,Andino Occidental,Andino Sureño
+Co01_,Co1,Costeño,Costeño atlántico,Cartagenero
+Co10_,Co10,Costeño,Costeño atlántico,Cartagenero
+Co11_,Co11,Costeño,Costeño atlántico,Atlántico interior
+Co02_,Co2,Costeño,Costeño atlántico,Atlántico interior
+Co03_,Co3,Costeño,Costeño atlántico,Atlántico interior
+Co30_,Co30,Costeño,Costeño atlántico,Atlántico interior
+Co04_,Co4,Costeño,Costeño atlántico,Atlántico interior
+Co40_,Co40,Costeño,Costeño atlántico,Atlántico interior
+A_01_,A1,Costeño,Costeño atlántico,Atlántico interior
+A_02_,A2,Costeño,Costeño atlántico,Atlántico interior
+A_20_,A20,Costeño,Costeño atlántico,Atlántico interior
+A_03_,A3,Costeño,Costeño atlántico,Atlántico interior
+A_30_,A30,Andino,Andino Occidental,Antioqueño-Caldense
+A_31_,A31,Andino,Andino Occidental,Antioqueño-Caldense
+A_32_,A32,Andino,Andino Occidental,Antioqueño-Caldense
+A_04_,A4,Costeño,Costeño atlántico,Atlántico interior
+A_40_,A40,Costeño,Costeño atlántico,Atlántico interior
+A_41_,A41,Andino,Andino Occidental,Antioqueño-Caldense
+A_42_,A42,Andino,Andino Occidental,Antioqueño-Caldense
+A_43_,A43,Andino,Andino Occidental,Antioqueño-Caldense
+A_44_,A44,Andino,Andino Occidental,Antioqueño-Caldense
+A_05_,A5,Andino,Andino Occidental,Antioqueño-Caldense
+A_50_,A50,Andino,Andino Occidental,Antioqueño-Caldense
+A_51_,A51,Andino,Andino Occidental,Antioqueño-Caldense
+A_52_,A52,Andino,Andino Occidental,Antioqueño-Caldense
+A_53_,A53,Andino,Andino Occidental,Antioqueño-Caldense
+A_54_,A54,Andino,Andino Occidental,Antioqueño-Caldense
+A_55_,A55,Andino,Andino Occidental,Antioqueño-Caldense
+A_56_,A56,Andino,Andino Occidental,Antioqueño-Caldense
+A_06_,A6,Andino,Andino Occidental,Antioqueño-Caldense
+A_60_,A60,Andino,Andino Occidental,Antioqueño-Caldense
+A_60a,A60a,Andino,Andino Occidental,Antioqueño-Caldense
+A_61_,A61,Andino,Andino Occidental,Antioqueño-Caldense
+A_62_,A62,Andino,Andino Occidental,Antioqueño-Caldense
+A_63_,A63,Andino,Andino Occidental,Antioqueño-Caldense
+R_01_,R1,Andino,Andino Occidental,Antioqueño-Caldense
+R_03_,R3,Andino,Andino Occidental,Antioqueño-Caldense
+R_06_,R6,Andino,Andino Occidental,Antioqueño-Caldense
+C_01_,C1,Andino,Andino Occidental,Antioqueño-Caldense
+C_02_,C2,Andino,Andino Occidental,Antioqueño-Caldense
+C_03_,C3,Andino,Andino Occidental,Antioqueño-Caldense
+C_04_,C4,Andino,Andino Occidental,Antioqueño-Caldense
+C_05_,C5,Andino,Andino Occidental,Antioqueño-Caldense
+Q_01_,Q1,Andino,Andino Occidental,Antioqueño-Caldense
+T_02_,T2,Andino,Andino Occidental,Antioqueño-Caldense
+T_20_,T20,Andino,Andino Occidental,Antioqueño-Caldense
+T_21_,T21,Andino,Andino Oriental,Tolimense-Huilense
+T_22_,T22,Andino,Andino Oriental,Tolimense-Huilense
+T_22a,T22a,Andino,Andino Oriental,Tolimense-Huilense
+T_23_,T23,Andino,Andino Oriental,Tolimense-Huilense
+T_03_,T3,Andino,Andino Oriental,Tolimense-Huilense
+T_04_,T4,Andino,Andino Oriental,Tolimense-Huilense
+T_40_,T40,Andino,Andino Oriental,Tolimense-Huilense
+T_41_,T41,Andino,Andino Oriental,Tolimense-Huilense
+T_42_,T42,Andino,Andino Oriental,Tolimense-Huilense
+T_43_,T43,Andino,Andino Oriental,Tolimense-Huilense
+T_44_,T44,Andino,Andino Oriental,Tolimense-Huilense
+T_05_,T5,Andino,Andino Oriental,Tolimense-Huilense
+T_50_,T50,Andino,Andino Oriental,Tolimense-Huilense
+T_06_,T6,Andino,Andino Oriental,Tolimense-Huilense
+T_60_,T60,Andino,Andino Oriental,Tolimense-Huilense
+H_02_,H2,Andino,Andino Oriental,Tolimense-Huilense
+H_03_,H3,Andino,Andino Oriental,Tolimense-Huilense
+H_30_,H30,Andino,Andino Oriental,Tolimense-Huilense
+H_31_,H31,Andino,Andino Oriental,Tolimense-Huilense
+H_04_,H4,Andino,Andino Oriental,Tolimense-Huilense
+H_05_,H5,Andino,Andino Oriental,Tolimense-Huilense
+H_50_,H50,Andino,Andino Oriental,Tolimense-Huilense
+Cq02_,Cq2,Andino,Andino Oriental,Tolimense-Huilense
+Cq03_,Cq3,Andino,Andino Oriental,Tolimense-Huilense
+Su01_,Su1,Costeño,Costeño atlántico,Cartagenero
+Su10_,Su10,Costeño,Costeño atlántico,Cartagenero
+Su02_,Su2,Costeño,Costeño atlántico,Atlántico interior
+Su03_,Su3,Costeño,Costeño atlántico,Atlántico interior
+Su04_,Su4,Costeño,Costeño atlántico,Atlántico interior
+Su06_,Su6,Costeño,Costeño atlántico,Atlántico interior
+At02_,At2,Costeño,Costeño atlántico,Cartagenero
+At03_,At3,Costeño,Costeño atlántico,Cartagenero
+At06_,At6,Costeño,Costeño atlántico,Cartagenero
+B_01_,B1,Costeño,Costeño atlántico,Cartagenero
+B_10_,B10,Costeño,Costeño atlántico,Cartagenero
+B_11_,B11,Costeño,Costeño atlántico,Cartagenero
+B_12_,B12,Costeño,Costeño atlántico,Cartagenero
+B_13_,B13,Costeño,Costeño atlántico,Cartagenero
+B_14_,B14,Costeño,Costeño atlántico,Cartagenero
+B_15_,B15,Costeño,Costeño atlántico,Cartagenero
+B_16_,B16,Costeño,Costeño atlántico,Cartagenero
+B_04_,B4,Costeño,Costeño atlántico,Cartagenero
+B_40_,B40,Costeño,Costeño atlántico,Atlántico interior
+B_06_,B6,Costeño,Costeño atlántico,Atlántico interior
+S_01_,S1,Costeño,Costeño atlántico,Atlántico interior
+S_10_,S10,Costeño,Costeño atlántico,Atlántico interior
+S_11_,S11,Costeño,Costeño atlántico,Atlántico interior
+S_02_,S2,Andino,Andino Oriental,Santandereano
+S_03_,S3,Costeño,Costeño atlántico,Atlántico interior
+S_04_,S4,Andino,Andino Oriental,Santandereano
+S_40_,S40,Andino,Andino Oriental,Santandereano
+S_41_,S41,Andino,Andino Oriental,Santandereano
+S_41a,S41a,Andino,Andino Oriental,Santandereano
+S_42_,S42,Andino,Andino Oriental,Santandereano
+S_42a,S42a,Andino,Andino Oriental,Santandereano
+S_43_,S43,Andino,Andino Oriental,Santandereano
+S_44_,S44,Andino,Andino Oriental,Santandereano
+S_44a,S44a,Andino,Andino Oriental,Santandereano
+S_45_,S45,Andino,Andino Oriental,Santandereano
+S_45a,S45a,Andino,Andino Oriental,Santandereano
+S_05_,S5,Andino,Andino Oriental,Santandereano
+S_50_,S50,Andino,Andino Oriental,Santandereano
+S_50a,S50a,Andino,Andino Oriental,Santandereano
+S_51_,S51,Andino,Andino Oriental,Santandereano
+S_52_,S52,Andino,Andino Oriental,Cundiboyacense
+S_06_,S6,Andino,Andino Oriental,Santandereano
+S_60_,S60,Andino,Andino Oriental,Santandereano
+S_60a,S60a,Andino,Andino Oriental,Santandereano
+S_61_,S61,Andino,Andino Oriental,Santandereano
+Bo02_,Bo2,Andino,Andino Oriental,Cundiboyacense
+Bo03_,Bo3,Andino,Andino Oriental,Cundiboyacense
+Bo30_,Bo30,Andino,Andino Oriental,Cundiboyacense
+Bo31_,Bo31,Andino,Andino Oriental,Cundiboyacense
+B032_,B032,Andino,Andino Oriental,Cundiboyacense
+Bo32a,Bo32a,Andino,Andino Oriental,Cundiboyacense
+Bo04_,Bo4,Andino,Andino Oriental,Cundiboyacense
+Bo40_,Bo40,Andino,Andino Oriental,Cundiboyacense
+Bo41_,Bo41,Andino,Andino Oriental,Cundiboyacense
+Bo42_,Bo42,Andino,Andino Oriental,Cundiboyacense
+Bo43_,Bo43,Andino,Andino Oriental,Cundiboyacense
+Bo43a,Bo43a,Andino,Andino Oriental,Cundiboyacense
+Bo44_,Bo44,Andino,Andino Oriental,Cundiboyacense
+Bo45_,Bo45,Andino,Andino Oriental,Cundiboyacense
+Bo46_,Bo46,Andino,Andino Oriental,Cundiboyacense
+Bo47_,Bo47,Andino,Andino Oriental,Cundiboyacense
+Bo05_,Bo5,Andino,Andino Oriental,Cundiboyacense
+Bo5a_,Bo5a,Andino,Andino Oriental,Cundiboyacense
+Bo50_,Bo50,Andino,Andino Oriental,Cundiboyacense
+Bo50a,Bo50a,Andino,Andino Oriental,Cundiboyacense
+Bo50b,Bo50b,Andino,Andino Oriental,Cundiboyacense
+Bo06_,Bo6,Andino,Andino Oriental,Cundiboyacense
+Bo60_,Bo60,Andino,Andino Oriental,Cundiboyacense
+Cu01_,Cu1,Andino,Andino Oriental,Cundiboyacense
+Cu10_,Cu10,Andino,Andino Oriental,Cundiboyacense
+Cu02_,Cu2,Andino,Andino Oriental,Cundiboyacense
+Cu20_,Cu20,Andino,Andino Oriental,Cundiboyacense
+Cu21_,Cu21,Andino,Andino Oriental,Cundiboyacense
+Cu03_,Cu3,Andino,Andino Oriental,Cundiboyacense
+Cu30_,Cu30,Andino,Andino Oriental,Cundiboyacense
+Cu30a,Cu30a,Andino,Andino Oriental,Cundiboyacense
+Cu30b,Cu30b,Andino,Andino Oriental,Cundiboyacense
+Cu30c,Cu30c,Andino,Andino Oriental,Cundiboyacense
+Cu31_,Cu31,Andino,Andino Oriental,Cundiboyacense
+Cu32_,Cu32,Andino,Andino Oriental,Cundiboyacense
+Cu33_,Cu33,Andino,Andino Oriental,Cundiboyacense
+Cu34_,Cu34,Andino,Andino Oriental,Cundiboyacense
+Cu34a,Cu34a,Andino,Andino Oriental,Cundiboyacense
+Cu34b,Cu34b,Andino,Andino Oriental,Cundiboyacense
+Cu34c,Cu34c,Andino,Andino Oriental,Cundiboyacense
+Cu34d,Cu34d,Andino,Andino Oriental,Cundiboyacense
+Cu04_,Cu4,Andino,Andino Oriental,Cundiboyacense
+Cu40_,Cu40,Andino,Andino Oriental,Cundiboyacense
+Cu41_,Cu41,Andino,Andino Oriental,Cundiboyacense
+Cu42_,Cu42,Andino,Andino Oriental,Cundiboyacense
+Cu43_,Cu43,Andino,Andino Oriental,Cundiboyacense
+Cu44_,Cu44,Andino,Andino Oriental,Cundiboyacense
+Cu45_,Cu45,Andino,Andino llanero,Llanero sur
+Cu05_,Cu5,Andino,Andino Oriental,Cundiboyacense
+Cu50_,Cu50,Andino,Andino Oriental,Cundiboyacense
+Cu51_,Cu51,Andino,Andino Oriental,Cundiboyacense
+Cu52_,Cu52,Andino,Andino Oriental,Cundiboyacense
+Cu06_,Cu6,Andino,Andino Oriental,Cundiboyacense
+Me01_,Me1,Andino,Andino llanero,Llanero sur
+Me10_,Me10,Andino,Andino llanero,Llanero sur
+Me02_,Me2,Andino,Andino llanero,Llanero sur
+M_01_ ,M1 ,Costeño,Costeño atlántico,Cartagenero
+M_02_,M2,Costeño,Costeño atlántico,Samario
+M_20_ ,M20 ,Costeño,Costeño atlántico,Samario
+M_21_,M21,Costeño,Costeño atlántico,Samario
+M_03_,M3,Costeño,Costeño atlántico,Cartagenero
+M_30_,M30,Costeño,Costeño atlántico,Cartagenero
+M_31_,M31,Costeño,Costeño atlántico,Cartagenero
+M_04_,M4,Costeño,Costeño atlántico,Cartagenero
+G_03_,G3,Costeño,Costeño atlántico,Guajiro
+G_30_,G30,Costeño,Costeño atlántico,Samario
+G_31_,G31,Costeño,Costeño atlántico,Guajiro
+G_04_,G4,Costeño,Costeño atlántico,Guajiro
+G_40_,G40,Costeño,Costeño atlántico,Guajiro
+G_05_,G5,Costeño,Costeño atlántico,Guajiro
+Ce01_,Ce1,Costeño,Costeño atlántico,Samario
+Ce02_,Ce2,Costeño,Costeño atlántico,Samario
+Ce20_,Ce20,Costeño,Costeño atlántico,Samario
+Ce03_,Ce3,Costeño,Costeño atlántico,Samario
+Ce30_,Ce30,Costeño,Costeño atlántico,Samario
+Ce04_,Ce4,Costeño,Costeño atlántico,Samario
+Ce05_,Ce5,Costeño,Costeño atlántico,Samario
+Ce50_,Ce50,Costeño,Costeño atlántico,Samario
+NS01_,NS1,Costeño,Costeño atlántico,Samario
+NS10_,NS10,Costeño,Costeño atlántico,Samario
+NS03_,NS3,Costeño,Costeño atlántico,Samario
+NS30_,NS30,Costeño,Costeño atlántico,Samario
+NS31_,NS31,Costeño,Costeño atlántico,Samario
+NS32_,NS32,Costeño,Costeño atlántico,Samario
+NS33_,NS33,Costeño,Costeño atlántico,Samario
+NS34_,NS34,Costeño,Costeño atlántico,Samario
+NS34a,NS34a,Costeño,Costeño atlántico,Samario
+NS04_,NS4,Costeño,Costeño atlántico,Samario
+NS40_,NS40,Costeño,Costeño atlántico,Samario
+NS40a,NS40a,Costeño,Costeño atlántico,Samario
+NS41_,NS41,Costeño,Costeño atlántico,Samario
+Ns41a,Ns41a,Costeño,Costeño atlántico,Samario
+NS05_,NS5,Costeño,Costeño atlántico,Samario
+NS06_,NS6,Andino,Andino Oriental,Santandereano
+NS60_,NS60,Andino,Andino Oriental,Santandereano
+NS61_,NS61,Andino,Andino Oriental,Santandereano
+NS62_,NS62,Andino,Andino Oriental,Santandereano
+NS63_,NS63,Andino,Andino Oriental,Santandereano
+Ar02_,Ar2,Andino,Andino llanero,Llanero norte
+Ar03_,Ar3,Andino,Andino llanero,Llanero norte
+Cs01_,Cs1,Andino,Andino llanero,Llanero norte
+Cs03_,Cs3,Andino,Andino llanero,Llanero norte
+Cs30_,Cs30,Andino,Andino llanero,Llanero norte
+Cs31_,Cs31,Andino,Andino llanero,Llanero norte
+Cs05_,Cs5,Andino,Andino llanero,Llanero norte
+Cs06_,Cs6,Andino,Andino llanero,Llanero norte
+Am01_,Am1,,,
