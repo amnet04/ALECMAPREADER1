@@ -12,6 +12,7 @@ with open(RUTA_PLANTILLAS+'/localidades.csv') as localidades:
     for row in reader:
         Localidad = dict(row)
         Localidad.pop('Idlocalidad')
+        Localidad.pop('Comentarios')
         LOCALIDADES[row['Idlocalidad']] = Localidad
 
 

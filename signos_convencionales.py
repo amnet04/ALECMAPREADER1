@@ -18,8 +18,8 @@ def unir_separadores(imagen):
         puntos, h, w = cvr.detectar_recursivo(template, imagen, 0.75)
         for punto in puntos:
             centro = (int(punto[0]+h/2), int(punto[1]+w/2))
-            izquierdo = (centro[0]-40, centro[1]-elevacion)
-            derecho = (centro[0]+40, centro[1]-elevacion)
+            izquierdo = (centro[0]-30, centro[1]-elevacion)
+            derecho = (centro[0]+30, centro[1]-elevacion)
             lineas.append((izquierdo, derecho, (0, 0, 0), 20))
     return(lineas)
 
@@ -53,18 +53,18 @@ def mascara_contener(mapa):
     for punto in puntos_der:
         top = (punto[0] + int(w_der/2), punto[1])
         bottom = (punto[0] + int(w_der/2), punto[1]+h_der)
-        center = (punto[0], punto[1] + int(h_der/2))
-        antena_sup = (center[0]-40, center[1] -20)
-        antena_inf = (center[0]-40, center[1] +20)
+        center = (punto[0]-10, punto[1] + int(h_der/2))
+        antena_sup = (center[0]-25, center[1] -10)
+        antena_inf = (center[0]-25, center[1] +10)
         lineas.append((top, bottom, (255, 255, 255), w_der))
         lineas.append((center, antena_sup, (0, 0, 0), 10))
         lineas.append((center, antena_inf, (0, 0, 0), 10))
     for punto in puntos_izq:
         top = (punto[0] + int(w_izq/2), punto[1])
         bottom = (punto[0] + int(w_izq/2), punto[1]+h_izq)
-        center = (punto[0]+w_izq, punto[1] + int(h_izq/2))
-        antena_sup = (center[0]+40, center[1] -20)
-        antena_inf = (center[0]+40, center[1] +20)
+        center = (punto[0]+w_izq+10, punto[1] + int(h_izq/2))
+        antena_sup = (center[0]+25, center[1] -15)
+        antena_inf = (center[0]+25, center[1] +15)
         lineas.append((top, bottom, (255, 255, 255), w_izq))
         lineas.append((center, antena_sup, (0, 0, 0), 10))
         lineas.append((center, antena_inf, (0, 0, 0), 10))
@@ -77,12 +77,11 @@ def signos_convencionales(mapa):
     lines = lines+adiciones(mapa)
     lines = lines+mascara_contener(mapa)
     for line in lines:
-        print (line)
         pt1, pt2, color, ancho = line
         cv2.line(mapa, pt1, pt2, color, ancho)
     mapa = cv2.cvtColor(mapa, cv2.COLOR_RGB2GRAY)
     ret, mapa = cv2.threshold(mapa, 200, 255, cv2.THRESH_BINARY_INV)
-    cv2.imwrite('Pruebas/col1.jpg', mapa)
+    #cv2.imwrite('Pruebas/col1.jpg', mapa)
     return(mapa)
 
 mapa = cv2.imread('../jpgs/alec_v4_044.jpg')

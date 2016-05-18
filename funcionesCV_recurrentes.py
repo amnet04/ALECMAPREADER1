@@ -39,9 +39,16 @@ def cortar_imagen(img,x1,x2,y1,y2):
     img_cortada['y2'] = y2
     return(img_cortada)
 
-def preprocesar_texto_otsu(img, umbral_blanco,limite,blur,blur_ori):
-    blur = cv2.GaussianBlur(img,blur,blur_ori)
-    ret,th = cv2.threshold(blur,umbral_blanco,limite,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
+def bw_otsu(img, umbral_blanco,limite,blur=0,blur_ori =0):
+    '''
+    blur es el shape del blur en tupla por ejemplo (5,5)
+    blur_ori es un entero. Si no se ponen valores no hace el blur
+    '''
+    if blur == (0,0):
+        blureada = img
+    else:
+        blureada = cv2.GaussianBlur(img,blur,blur_ori)
+    ret,th = cv2.threshold(blureada,umbral_blanco,limite,cv2.THRESH_BINARY+cv2.THRESH_OTSU)
     return (th)
 
 def bw_adapta(img,limite,tam,sh):
@@ -97,20 +104,25 @@ def detectar_area_contornos(imagen,
                             dim_kernel,
                             iteraciones,
                             w, h):
-    height, width = imagen.shape[:2]
     imagen_dilatada = dilatar_imagen(imagen,
                                      umbral_blanco,
                                      umbral_negro,
                                      dim_kernel,
                                      iteraciones)
-    #ver_imagen(imagen, 'Npi')
     imagen, contours, hierarchy = cv2.findContours(imagen_dilatada,
                                                    cv2.RETR_TREE,
                                                    cv2.CHAIN_APPROX_SIMPLE)
-    #ver_imagen(imagen, 'Npi')
     areas = []
     for contour in contours:
         [x,y,wc,hc] = cv2.boundingRect(contour)
+        x1 = x
+        y1 = y
+        x2 = x+wc
+        y2 = y+hc
         if (wc > w) and (hc >  h):
-            areas.append(((x,y),(x+wc,y+hc)))
+            print ('<<<<<<<<<<<<<<<<<<<<<<')
+            print (len((x1, y1 , x2, y2)))
+            print ('>>>>>>>>>>>>>>>>>>>>>')
+            areas.append((x1, y1 , x2, y2))
+
     return (areas)

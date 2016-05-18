@@ -58,9 +58,13 @@ class departamento(object):
                     img_loc = localidad.localidad(datos['Plantilla'],sroi)
                     new_sup = tuple(map(add, sup, img_loc.supi))
                     new_sup = tuple(map(add, new_sup, self.supi))
-                    self.localidades[id]['supi']=new_sup
+                    w, h, _ = img_loc.roi.shape
+                    centro_inf = (new_sup[0]+int(w/2), new_sup[1] + h)
+                    self.localidades[id]['supi'] = new_sup
+                    self.localidades[id]['centro_inf'] = centro_inf
                 else:
                     print('No existe plantilla para {0}'.format(id))
+
 
     def area_variantes(self):
         img = np.array(self.mapa)
@@ -73,8 +77,9 @@ class departamento(object):
             #cvr.ver_imagen(roiv, id)
             areas = cvr.detectar_area_contornos(roiv, 200, 255, (1,1), 1, 18,18)
             for area in areas:
-                area_supi = tuple(map(add, area[0],supi))
-                area_infd = tuple(map(add, area[1],supi))
+                x1, y1, x2, y2 = area
+                area_supi = tuple(map(add, (x1,y1),supi))
+                area_infd = tuple(map(add, (x2,y2),supi))
                 left = area_supi[0] < (supi[0]+infd[0])/2
                 rigth = area_infd[0] > (supi[0]+infd[0])/2
                 center = left and rigth
@@ -94,7 +99,44 @@ class departamento(object):
                                 2
                                 )
         cv2.imwrite('Pruebas/col2.jpg',img)
+    # def area_variantes(self):
+    #     img = np.array(self.mapa)
+    #     self.detectar_localidades()
+    #     for id, datos in self.localidades.items():
+    #         supi = (datos['centro_inf'][0] - 200, datos['centro_inf'][1])
+    #         infd = (datos['centro_inf'][0] + 200, datos['centro_inf'][1]+80)
+    #         roiv = self.mapa[supi[1]:infd[1],supi[0]:infd[0]]
+    #         roiv = sc.signos_convencionales(roiv)
+    #         areas = cvr.detectar_area_contornos(roiv, 200, 255, (1,1), 1, 18,18)
+    #         if id == 'Cu05_':
+    #             cv2.rectangle(img, supi, infd, (255,0,0), 3)
+    #             cv2.imwrite('Pruebas/col1.jpg',roiv)
+    #             for areas in areas:
+    #                 cv2.rectangle(img, supi, infd, (0,255,0), 3)
+    #
+    #         for area in areas:
+    #             x1, y1, x2, y2 = area
+    #             area_supi = tuple(map(add, (x1,y1),supi))
+    #             area_infd = tuple(map(add, (x2,y2),supi))
+    #             left = area_supi[0] < (supi[0]+infd[0])/2
+    #             rigth = area_infd[0] > (supi[0]+infd[0])/2
+    #             center = left and rigth
+    #             top = area_supi[1] - 20 <  supi[1]
+    #             no_marco =  (area_infd[0] - area_supi[0]) < 398
+    #             color = (0,0,255)
+    #             elegido = center and top and no_marco
+    #             if elegido:
+    #                 cv2.rectangle(img, area_supi, area_infd,color,2)
+    #                 cv2.putText(img,
+    #                             datos['localidadalec'],
+    #                             area_supi,
+    #                             cv2.FONT_HERSHEY_SIMPLEX,
+    #                             0.8,
+    #                             (0, 0, 0),
+    #                             2
+    #                             )
+    #     cv2.imwrite('Pruebas/col2.jpg',img)
 
 
-mapa = departamento(RUTA_DEPARTAMENTOS+'/Bo.jpg',cv2.imread('../jpgs/alec_v4_044.jpg'))
+mapa = departamento(RUTA_DEPARTAMENTOS+'/Cu.jpg',cv2.imread('../jpgs/alec_v4_044.jpg'))
 mapa.area_variantes()
