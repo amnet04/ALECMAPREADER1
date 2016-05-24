@@ -78,10 +78,9 @@ def detectar(template, imagen, max_var_thresh):
     if max_val < max_var_thresh:
         #cv2.imwrite('Pruebas/tast.jpg',imagen[y1:y2,x1:x2])
         print (max_val)
-        roi = imagen[0:1,0:1]
-        return((0,0), (1,1), roi)
+        return(None)
     else:
-        print (max_val)
+        #print (max_val)
         sup_izq = (x1,y1)
         inf_der = (x2,y2)
         roi = imagen[y1:y2,x1:x2]

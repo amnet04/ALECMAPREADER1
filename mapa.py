@@ -30,5 +30,5 @@ class mapa(object):
         mapa = np.array(self.mapa)
 
 
-# map = mapa('../jpgs/alec_v1_091.jpg')
-# map.georeferenciar()
+map = mapa('../jpgs/alec_v4_044.jpg')
+map.georeferenciar()

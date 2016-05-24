@@ -11,7 +11,7 @@ def unir_separadores(imagen):
                    'hombre_mujer.jpg']
     lineas = []
     for separador in separadores:
-        elevacion = 10
+        elevacion = 12
         if separador == 'mismo_genero.jpg' or   separador == 'hombre_mujer.jpg':
             elevacion = -5
         template = cv2.imread('Signos_Convencionales/'+separador, 0)
@@ -20,7 +20,7 @@ def unir_separadores(imagen):
             centro = (int(punto[0]+h/2), int(punto[1]+w/2))
             izquierdo = (centro[0]-30, centro[1]-elevacion)
             derecho = (centro[0]+30, centro[1]-elevacion)
-            lineas.append((izquierdo, derecho, (0, 0, 0), 20))
+            lineas.append((izquierdo, derecho, (0, 0, 0), 15))
     return(lineas)
 
 def asterisco(mapa):
@@ -29,8 +29,8 @@ def asterisco(mapa):
     lineas = []
     for punto in puntos:
         centro = (int(punto[0]+h/2), int(punto[1]+w/2))
-        izquierdo = (centro[0]-5, punto[1]+20)
-        derecho = (centro[0]+5, punto[1]+20)
+        izquierdo = (centro[0]-10, punto[1]+20)
+        derecho = (centro[0]+10, punto[1]+20)
         lineas.append((izquierdo, derecho, (0, 0, 0), 20))
     return(lineas)
 
@@ -40,7 +40,7 @@ def adiciones(mapa):
     lineas = []
     for punto in puntos:
         centro = (int(punto[0]+h/2), int(punto[1]+w/2))
-        izquierdo = (centro[0]-40, punto[1]+10)
+        izquierdo = (centro[0]-35, punto[1]+10)
         lineas.append((centro, izquierdo, (0, 0, 0), 20 ))
     return(lineas)
 
