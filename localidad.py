@@ -52,7 +52,7 @@ class localidad(object):
         self.id = os.path.basename(template)[:-4]
         self.nombre = LOCALIDADES[self.id]['Nombre']
         self.imagen = imagen
-        if cvr.detectar(self.template, imagen, 400000) is not None:
+        if cvr.detectar(self.template, imagen, 400000)[0] is not None:
             self.supi, self.infd, self.roi = cvr.detectar(self.template,
                                                           imagen,
                                                           400000)

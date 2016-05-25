@@ -25,17 +25,25 @@ class departamento(object):
         self.nombre_archivo = os.path.basename(template)
         self.id = os.path.basename(template)[:-4]
         self.puntos = template+".points"
-        if cvr.detectar(self.template, self.mapa, 99999999) is not None:
-            self.supi, self.infd, self.roi = cvr.detectar(self.template,
+        self.sextantes = [x for x in os.listdir("Plantillas/Sextantes")
+                          if x[:2] == self.id]
+        self.localidades = {k: v for k, v in localidad.LOCALIDADES.items()
+                            if (k[:2] == self.id and k[-1] == '_')
+                            }
+        for k, v in self.localidades.items():
+                        v['Plantilla'] = RUTA_LOCALIDADES+'/'+k+'.jpg'
+        thresh = 100000000
+        while cvr.detectar(self.template, self.mapa, thresh)[0] is None:
+            thresh = cvr.detectar(self.template, self.mapa, thresh)[1]
+            print('''Departamento no identificado en el mapa, intentando con un
+            menor valor de match''')
+        if cvr.detectar(self.template, self.mapa, thresh) is not None:
+                self.supi, self.infd, self.roi = cvr.detectar(self.template,
                                                           self.mapa,
-                                                          99999999)
-            self.sextantes = [x for x in os.listdir("Plantillas/Sextantes")
-                              if x[:2] == self.id]
-            self.localidades = {k: v for k, v in localidad.LOCALIDADES.items()
-                                if (k[:2] == self.id and k[-1] == '_')
-                                }
-            for k, v in self.localidades.items():
-                v['Plantilla'] = RUTA_LOCALIDADES+'/'+k+'.jpg'
+                                                          thresh)
+
+
+
 
     def enmarcar(self, img = None):
         if img is None:
@@ -46,6 +54,7 @@ class departamento(object):
         georef.georef_area(self.roi, self.puntos, 'Pruebas/'+self.id+'.tif')
 
     def detectar_localidades(self):
+        print (self.id)
         for sextante in self.sextantes:
             id_sextante = sextante[2]
             template = cv2.imread(RUTA_SEXTANTES+'/'+sextante, 0)
@@ -112,5 +121,5 @@ class departamento(object):
                                 )
         cv2.imwrite('Pruebas/col2.jpg',img)
 
-mapa = departamento(RUTA_DEPARTAMENTOS+'/Me.jpg',cv2.imread('../jpgs/mapas/alec_v4_044.jpg'))
+mapa = departamento(RUTA_DEPARTAMENTOS+'/Q_.jpg',cv2.imread('../jpgs/mapas/alec_v4_044.jpg'))
 mapa.area_variantes()
