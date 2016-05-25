@@ -92,15 +92,17 @@ class departamento(object):
             supi = (datos['centro_inf'][0]-201,datos['centro_inf'][1]-7)
             infd = (datos['centro_inf'][0]+201,datos['centro_inf'][1]+105)
             roiv = np.array(self.mapa[supi[1]:infd[1],supi[0]:infd[0]])
-            print (roiv.shape)
             roiv = sc.signos_convencionales(roiv)
-            print (roiv.shape)
             cv2.imwrite('Pruebas/'+id+'.jpg',roiv)
             #cv2.rectangle(img, supi, infd,(0,255,255),2)
             #cv2.line(img, (datos['centro_inf'][0],datos['centro_inf'][1]-6), (datos['centro_inf'][0],datos['centro_inf'][1]+105), (255,0,0),1)
-            areas = cvr.detectar_area_contornos(roiv, 200, 255, (1,1), 1, 20, 20)
+            areas = cvr.detectar_area_contornos(roiv, 250, 255, (0,0), 1, 20, 20)
+            print (areas)
             for area in areas:
-                x1, y1, x2, y2 = area
+                x1 = area[0]-2
+                y1 = area[1]-2
+                x2 = area[2]+2
+                y2 = area[3]+2
                 area_supi = tuple(map(add, (x1,y1),supi))
                 area_infd = tuple(map(add, (x2,y2),supi))
                 left = area_supi[0] < (supi[0]+infd[0])/2
@@ -112,7 +114,7 @@ class departamento(object):
                 color = (0,0,255)
                 elegido = center and no_marco and top
                 #if not elegido and no_marco:
-                    #cv2.rectangle(img, area_supi, area_infd,(0,255,0),2)
+                #    cv2.rectangle(img, area_supi, area_infd,(0,255,0),2)
                 if elegido:
                     cv2.rectangle(img, area_supi, area_infd,color,2)
                     cv2.putText(img,
@@ -123,7 +125,10 @@ class departamento(object):
                                 (0, 0, 0),
                                 2
                                 )
+                    variantes = np.array(self.mapa[area_supi[1]:area_infd[1],
+                                         area_supi[0]:area_infd[0]])
+                    cv2.imwrite('Proceso/'+id+'.jpg', variantes)
         cv2.imwrite('Pruebas/col2.jpg',img)
 
-mapa = departamento(RUTA_DEPARTAMENTOS+'/Am.jpg',cv2.imread('../jpgs/mapas/alec_v4_044.jpg'))
+mapa = departamento(RUTA_DEPARTAMENTOS+'/Bo.jpg',cv2.imread('../jpgs/mapas/alec_v4_044.jpg'))
 mapa.area_variantes()

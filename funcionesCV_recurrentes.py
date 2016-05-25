@@ -102,11 +102,14 @@ def detectar_area_contornos(imagen,
                             dim_kernel,
                             iteraciones,
                             w, h):
-    imagen_dilatada = dilatar_imagen(imagen,
-                                     umbral_blanco,
-                                     umbral_negro,
-                                     dim_kernel,
-                                     iteraciones)
+    if dim_kernel != (0,0):
+        imagen_dilatada = dilatar_imagen(imagen,
+                                         umbral_blanco,
+                                         umbral_negro,
+                                         dim_kernel,
+                                         iteraciones)
+    else:
+        imagen_dilatada = imagen
     imagen, contours, hierarchy = cv2.findContours(imagen_dilatada,
                                                    cv2.RETR_TREE,
                                                    cv2.CHAIN_APPROX_SIMPLE)

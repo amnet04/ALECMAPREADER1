@@ -11,11 +11,11 @@ def unir_separadores(imagen):
                    'hombre_mujer.jpg']
     lineas = []
     for separador in separadores:
-        elevacion = 12
+        elevacion = 5
         if separador == 'mismo_genero.jpg' or   separador == 'hombre_mujer.jpg':
             elevacion = -5
         template = cv2.imread('Signos_Convencionales/'+separador, 0)
-        puntos, h, w = cvr.detectar_recursivo(template, imagen, 0.75)
+        puntos, h, w = cvr.detectar_recursivo(template, imagen, 0.7)
         for punto in puntos:
             centro = (int(punto[0]+h/2), int(punto[1]+w/2))
             izquierdo = (centro[0]-30, centro[1]-elevacion)
@@ -83,6 +83,3 @@ def signos_convencionales(mapa):
     ret, mapa = cv2.threshold(mapa, 200, 255, cv2.THRESH_BINARY_INV)
     #cv2.imwrite('Pruebas/col1.jpg', mapa)
     return(mapa)
-
-mapa = cv2.imread('../jpgs/alec_v4_044.jpg')
-signos_convencionales(mapa)
