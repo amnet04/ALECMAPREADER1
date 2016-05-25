@@ -54,7 +54,7 @@ class departamento(object):
         georef.georef_area(self.roi, self.puntos, 'Pruebas/'+self.id+'.tif')
 
     def detectar_localidades(self):
-        print (self.id)
+
         for sextante in self.sextantes:
             id_sextante = sextante[2]
             template = cv2.imread(RUTA_SEXTANTES+'/'+sextante, 0)
@@ -66,17 +66,21 @@ class departamento(object):
                               }
                 for id, datos in localidades.items():
                     if os.path.isfile(datos['Plantilla']):
-                        img_loc = localidad.localidad(datos['Plantilla'], sroi, id)
+                        img_loc = localidad.localidad(datos['Plantilla'],
+                                                      sroi,
+                                                      id)
                         # cvr.ver_imagen(img_loc.roi, id)
                         new_sup = tuple(map(add, sup, img_loc.supi))
                         new_sup = tuple(map(add, new_sup, self.supi))
                         h, w, _ = img_loc.roi.shape
-                        centro_inf = (new_sup[0]+int(w/2), new_sup[1] + h)
+                        if self.id != 'Am': #Caso especial amazonas
+                            centro_inf = (new_sup[0]+int(w/2), new_sup[1] + h)
+                        else:
+                            centro_inf = (new_sup[0]+ w + 30, new_sup[1]+15)
                         self.localidades[id]['supi'] = new_sup
                         self.localidades[id]['centro_inf'] = centro_inf
             else:
                 print('No se detecta el sextante {0} en el mapa'.format(sextante))
-
 
     def area_variantes(self):
         img = np.array(self.mapa)
@@ -121,5 +125,5 @@ class departamento(object):
                                 )
         cv2.imwrite('Pruebas/col2.jpg',img)
 
-mapa = departamento(RUTA_DEPARTAMENTOS+'/Q_.jpg',cv2.imread('../jpgs/mapas/alec_v4_044.jpg'))
+mapa = departamento(RUTA_DEPARTAMENTOS+'/Am.jpg',cv2.imread('../jpgs/mapas/alec_v4_044.jpg'))
 mapa.area_variantes()
